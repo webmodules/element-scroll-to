@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example</title>
+  <script src="example.js"></script>
+  <script>
+    var scrollTo = example;
+    function randomize() {
+      var target = document.querySelector('.target');
+      target.style.top = Math.round(Math.random() * 1000) + 'px';
+      target.style.left = Math.round(Math.random() * 1000) + 'px';
+    }
+    function scroll() {
+      var target = document.querySelector('.target');
+      scrollTo(target);
+    }
+  </script>
+  <style>
+    .container {
+      overflow: auto;
+      margin: 40px;
+      position: relative;
+    }
+    .target {
+      width: 40px;
+      height: 40px;
+      background: black;
+      position: absolute;
+    }
+    .bar {
+      position: fixed;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" style="background: red; width: 600px; height: 400px">
+    <div class="container" style="background: blue; width: 800px; height: 600px">
+      <div class="container" style="background: lime; width: 1000px; height: 800px">
+        <div class="target"></div> 
+      </div>
+    </div>
+  </div>
+  <div class="bar">
+    <button onclick="randomize()">Randomize</button>
+    <button onclick="scroll()">Scroll To</button>
+  </div>
+</body>
+</html>
