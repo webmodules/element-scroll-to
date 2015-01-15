@@ -25,7 +25,7 @@ example: build
 clean: $(COMPILED_FILES)
 	rm $(COMPILED_FILES)
 
-node_modules: package.json
+node_modules:
 	npm install
 
 %.js: %.es6
