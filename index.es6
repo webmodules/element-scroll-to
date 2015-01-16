@@ -41,6 +41,4 @@ function scrollTo(element) {
   scrollWindow(element); 
 }
 
-var a = new Proxy();
-
 export default scrollTo;
