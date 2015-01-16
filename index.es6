@@ -1,6 +1,6 @@
 function scrollWrapperElements(element) {
   let wrapper = element.parentNode;
-  while (wrapper != document.documentElement) {
+  while (wrapper != document.body) {
     let elementRect = element.getBoundingClientRect();
     let wrapperRect = wrapper.getBoundingClientRect();
     let deltaX = 0, deltaY = 0;
@@ -38,7 +38,9 @@ function scrollWindow(element) {
 
 function scrollTo(element) {
   scrollWrapperElements(element);
-  scrollWindow(element);
+  scrollWindow(element); 
 }
 
-module.exports = scrollTo;
+var a = new Proxy();
+
+export default scrollTo;
