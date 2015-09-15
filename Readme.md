@@ -1,7 +1,7 @@
 # element-scroll-to
 
-Makes sure an element is fully visible on the browser viewport, 
-by recursively scrolling all elements that might be containing it, 
+Makes sure an element is fully visible on the browser viewport,
+by recursively scrolling all elements that might be containing it,
 along with the browser window.
 
 If scrolling the entirety of the element into the viewport is not
@@ -18,8 +18,12 @@ var scrollTo = require('element-scroll-to');
 
 // ...
 
-scrollTo(element);
+scrollTo(element, options);
 ```
+
+options may include:
+
+- `margin` (default 0): additional gutters around the element
 
 ## License
 
